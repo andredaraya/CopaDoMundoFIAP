@@ -1,0 +1,31 @@
+﻿@using CopaDoMundo.Web.ViewModels
+@model List<SelecaoViewModel>
+
+@{
+    var temSelecao = Model != null && Model.Any();
+
+    ViewData["Title"] = "Home";
+}
+<div class="jumbotron text-center">
+    <h1>Bem-vindo ao site 12NET - Copa do mundo 2018!</h1>
+</div>
+@if (ViewBag.Error != null && ViewBag.Error)
+{
+    <div class="alert alert-danger alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Erro!</strong> Deu ruim!
+    </div>
+}
+@if (temSelecao)
+{
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <h2>@item.Nome</h2>
+                <p>@item.QuantidadeTitulos</p>
+                <p><a class="btn btn-primary" href="~/Selecao/@item.ID">EDITAR &raquo;</a></p>
+            </div>
+        }
+    </div>
+}

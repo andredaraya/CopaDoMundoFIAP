@@ -1,0 +1,15 @@
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\bin\Debug\netcoreapp2.0\CopaDoMundo.Web.deps.json
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\bin\Debug\netcoreapp2.0\CopaDoMundo.Web.runtimeconfig.json
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\bin\Debug\netcoreapp2.0\CopaDoMundo.Web.runtimeconfig.dev.json
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\bin\Debug\netcoreapp2.0\CopaDoMundo.Web.dll
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\bin\Debug\netcoreapp2.0\CopaDoMundo.Web.pdb
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\obj\Debug\netcoreapp2.0\CopaDoMundo.Web.csprojResolveAssemblyReference.cache
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\obj\Debug\netcoreapp2.0\CopaDoMundo.Web.csproj.CoreCompileInputs.cache
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\obj\Debug\netcoreapp2.0\CopaDoMundo.Web.AssemblyInfoInputs.cache
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\obj\Debug\netcoreapp2.0\CopaDoMundo.Web.AssemblyInfo.cs
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\obj\Debug\netcoreapp2.0\CopaDoMundo.Web.dll
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\obj\Debug\netcoreapp2.0\CopaDoMundo.Web.pdb
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\bin\Debug\netcoreapp2.0\CopaDoMundo.Web.Cross.dll
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\bin\Debug\netcoreapp2.0\CopaDoMundo.Web.Dominio.dll
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\bin\Debug\netcoreapp2.0\CopaDoMundo.Web.Cross.pdb
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web\bin\Debug\netcoreapp2.0\CopaDoMundo.Web.Dominio.pdb
