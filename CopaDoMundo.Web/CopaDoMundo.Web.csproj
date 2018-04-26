@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CopaDoMundo.Web.Cross\CopaDoMundo.Web.Cross.csproj" />
-    <ProjectReference Include="..\CopaDoMundo.Web.Dominio\CopaDoMundo.Web.Dominio.csproj" />
+    <ProjectReference Include="..\CopaDoMundo.Web.Dominio\CopaDoMundo.Web.Servico.csproj" />
   </ItemGroup>
 
 </Project>

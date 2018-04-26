@@ -1,12 +1,13 @@
 ﻿using CopaDoMundo.Web.Cross.DTO;
-using CopaDoMundo.Web.Dominio.Interfaces.Servicos;
+using CopaDoMundo.Web.Servico.Interfaces;
 using System;
 using System.Collections.Generic;
 
-namespace CopaDoMundo.Web.Dominio.Servicos
+namespace CopaDoMundo.Web.Servico.Servicos
 {
     public class JogadorServico : IJogadorServico
     {
+        //Usa Flurl
         public JogadorServico()
         {
 

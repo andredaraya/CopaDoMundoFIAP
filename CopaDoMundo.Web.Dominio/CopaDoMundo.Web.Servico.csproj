@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>CopaDoMundo.Web.Servico</AssemblyName>
+    <RootNamespace>CopaDoMundo.Web.Servico</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopaDoMundo.Web", "CopaDoMundo.Web\CopaDoMundo.Web.csproj", "{4789D623-195D-412D-B151-8DF066C1B995}"
 EndProject
@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CopaDoMundo.MVC", "CopaDoMu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CopaDoMundo.Api", "CopaDoMundo.Api", "{4C5502CF-F0F9-4D0B-B475-7F43BEA1C5A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopaDoMundo.Web.Dominio", "CopaDoMundo.Web.Dominio\CopaDoMundo.Web.Dominio.csproj", "{7C003F8D-259C-4AA3-A5FE-022F53EF602E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopaDoMundo.Web.Servico", "CopaDoMundo.Web.Dominio\CopaDoMundo.Web.Servico.csproj", "{7C003F8D-259C-4AA3-A5FE-022F53EF602E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaDoMundo.Web.Cross", "CopaDoMundo.Web.Cross\CopaDoMundo.Web.Cross.csproj", "{EE6E24EA-0242-4CAC-BA5A-A3B0D381C556}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopaDoMundo.Web.Cross", "CopaDoMundo.Web.Cross\CopaDoMundo.Web.Cross.csproj", "{EE6E24EA-0242-4CAC-BA5A-A3B0D381C556}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
