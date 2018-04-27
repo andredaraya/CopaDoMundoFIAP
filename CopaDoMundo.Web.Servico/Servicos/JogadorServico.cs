@@ -3,6 +3,7 @@ using CopaDoMundo.Web.Servico.Interfaces;
 using CopaDoMundo.Web.Servico.Options;
 using Flurl;
 using Flurl.Http;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -48,6 +49,35 @@ namespace CopaDoMundo.Web.Servico.Servicos
 
         public async Task<IEnumerable<JogadorDTO>> BuscarPorSelecao(int selecaoId)
         {
+            List<JogadorDTO> listTemp = new List<JogadorDTO>();
+            listTemp.Add(new JogadorDTO()
+            {
+                ID = 1,
+                Nome = "Alejo",
+                Apelido = "Gornaldo",
+                Idade = 35,
+                Posicao = "Centro Avante", //descrição que virá do banco
+                Ativo = true,
+                CriadoEm = DateTime.Now,
+                Selecao = 1
+
+            });
+
+            listTemp.Add(new JogadorDTO()
+            {
+                ID = 2,
+                Nome = "Garrincha",
+                Apelido = "Torto",
+                Idade = 90,
+                Posicao = "Centro Avante", //descrição que virá do banco
+                Ativo = true,
+                CriadoEm = DateTime.Now,
+                Selecao = 1
+
+            });
+
+            return listTemp;
+
             return await this._options.BuscarPorselecao
                                      .SetQueryParams(selecaoId)
                                      .WithHeader("Cache-Control", "no-cache")

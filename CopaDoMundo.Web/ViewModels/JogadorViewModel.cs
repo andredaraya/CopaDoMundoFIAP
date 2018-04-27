@@ -27,9 +27,8 @@ namespace CopaDoMundo.Web.ViewModels
         public ePosicao Posicao { get; set; }
 
         [Display(Name = "Seleção")]
-        public SelecaoViewModel Selecao { get; set; }
+        public int Selecao { get; set; }
 
         public List<SelecaoViewModel> Selecoes { get; set; }
-        public int SelecaoEscolhida { get; set; }
     }
 }

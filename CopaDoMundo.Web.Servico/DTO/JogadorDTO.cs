@@ -9,6 +9,6 @@ namespace CopaDoMundo.Web.Servico.DTO
         public string Apelido { get; set; }
         public int Idade { get; set; }
         public string Posicao { get; set; }
-        public SelecaoDTO Selecao { get; set; }
+        public int  Selecao { get; set; }
     }
 }

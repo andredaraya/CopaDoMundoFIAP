@@ -1,0 +1,60 @@
+﻿@using CopaDoMundo.Web.Extensoes
+@model SelecaoViewModel
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h2>Editar</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Editar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.HiddenFor(model => model.ID)
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuantidadeTitulos" class="control-label"></label>
+                <input asp-for="QuantidadeTitulos" class="form-control" />
+                <span asp-validation-for="QuantidadeTitulos" class="text-danger"></span>
+            </div>
+
+            <div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Apelido</th>
+                            <th>Posição</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Jogadores)
+            {
+                            <tr>
+                                <td>@item.Nome</td>
+                                <td>@item.Apelido</td>
+                                <td>@item.Posicao.ToDescriptionString()</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Listar">Voltar</a>
+</div>
+

@@ -4,51 +4,51 @@ namespace CopaDoMundo.Web.Enum
 {
     public enum ePosicao 
     {
-        [Description("G")]
-        Goleiro,
-        [Description("ZD")]
-        ZagueiroDireito,
-        [Description("ZC")]
-        ZagueiroCentral = 1,
-        [Description("ZE")]
-        ZagueiroEsquerdo = 1,
-        [Description("L")]
-        Líbero = 1,
-        [Description("LD")]
-        LateralDireito = 1,
-        [Description("LE")]
-        LateralEsquerdo = 1,
-        [Description("V")]
-        Volante = 1,
-        [Description("MC")]
-        MeiaCentral = 1,
-        [Description("A")]
-        Armador = 1,
-        [Description("MO")]
-        MeiaOfensivo = 1,
-        [Description("MEO")]
-        MeiaEsquerdaOfensivo = 1,
-        [Description("MDO")]
-        MeiaDireitaOfensivo = 1,
-        [Description("ME")]
-        MeiaEsquerda = 1,
-        [Description("MD")]
-        MeiaDireita = 1,
-        [Description("MAE")]
-        MeioAlaEsquerdo = 1,
-        [Description("MAD")]
-        MeioAlaDireito = 1,
-        [Description("AD")]
-        AlaDireito = 1,
-        [Description("AE")]
-        AlaEsquerto = 1,
-        [Description("ATE")]
-        AtacanteEsquerdo = 1,
-        [Description("ATD")]
-        AtacanteDireito = 1,
-        [Description("AT")]
-        Atacante = 1,
-        [Description("CA")]
-        CentroAvante = 1
+        [Description("Goleiro")]
+        Goleiro = 1,
+        [Description("Zagueiro Direito")]
+        ZagueiroDireito = 2,
+        [Description("Zagueiro Central")]
+        ZagueiroCentral = 3,
+        [Description("Zagueiro Esquerdo")]
+        ZagueiroEsquerdo = 4,
+        [Description("Líbero")]
+        Libero = 5,
+        [Description("Lateral Direito")]
+        LateralDireito = 6,
+        [Description("Lateral Esquerdo")]
+        LateralEsquerdo = 7,
+        [Description("Volante")]
+        Volante = 8,
+        [Description("Meia Central")]
+        MeiaCentral = 9,
+        [Description("Armador")]
+        Armador = 10,
+        [Description("Meia Ofensivo")]
+        MeiaOfensivo = 11,
+        [Description("Meia Esquerda Ofensivo")]
+        MeiaEsquerdaOfensivo = 12,
+        [Description("Meia Direita Ofensivo")]
+        MeiaDireitaOfensivo = 13,
+        [Description("Meia Esquerda")]
+        MeiaEsquerda = 14,
+        [Description("Meia Direita")]
+        MeiaDireita = 15,
+        [Description("Meio Ala Esquerdo")]
+        MeioAlaEsquerdo = 16,
+        [Description("Meio Ala Direito")]
+        MeioAlaDireito = 17,
+        [Description("Ala Direito")]
+        AlaDireito = 18,
+        [Description("Ala Esquerto")]
+        AlaEsquerto = 19,
+        [Description("Atacante Esquerdo")]
+        AtacanteEsquerdo = 20,
+        [Description("Atacante Direito")]
+        AtacanteDireito = 21,
+        [Description("Atacante")]
+        Atacante = 22,
+        [Description("Centro Avante")]
+        CentroAvante = 23
     }
 }

@@ -23,11 +23,11 @@ namespace CopaDoMundo.Web.Controllers
             var selecao = _servico.BuscarPorId(id).Result;
             var selecaoMapeada = Mapper.Map<SelecaoViewModel>(selecao);
 
-            var jogadores = _jogadorServico.BuscarPorSelecao(id);
+            var jogadores = _jogadorServico.BuscarPorSelecao(id).Result;
             var jogadoresMapeados = Mapper.Map<List<JogadorViewModel>>(jogadores);
             selecaoMapeada.Jogadores = jogadoresMapeados;
 
-            return View(selecaoMapeada);
+            return View("Editar",selecaoMapeada);
         }
     }
 }

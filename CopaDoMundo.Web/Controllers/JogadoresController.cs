@@ -12,7 +12,7 @@ namespace CopaDoMundo.Web.Controllers
     {
         private readonly IJogadorServico _jogadorServico;
         private readonly ISelecaoServico _selecaoServico;
-        private static List<SelecaoViewModel> _selecoes;
+
         public JogadoresController(IJogadorServico jogadorServico, ISelecaoServico selecaoServico) : base(jogadorServico)
         {
             _jogadorServico = jogadorServico;
@@ -22,16 +22,13 @@ namespace CopaDoMundo.Web.Controllers
         public override IActionResult Criar()
         {
             JogadorViewModel model = new JogadorViewModel();
-
             model.Selecoes = Mapper.Map<List<SelecaoViewModel>>(_selecaoServico.BuscarTodosAtivos().Result);
-            _selecoes = model.Selecoes;
 
             return View(model);
         }
 
         public override IActionResult Criar(JogadorViewModel entidade)
         {
-            entidade.Selecao = _selecoes.Where(s => s.ID == entidade.SelecaoEscolhida).SingleOrDefault();
             return base.Criar(entidade);
         }
 

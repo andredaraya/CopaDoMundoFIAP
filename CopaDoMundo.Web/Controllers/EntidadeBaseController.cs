@@ -75,7 +75,7 @@ namespace CopaDoMundo.Web.Controllers
                 _servico.Atualizar(entidadeMapeada);
             }
 
-            return RedirectToAction("List");
+            return RedirectToAction("Listar");
         }
 
         public IActionResult Deletar(int id)
