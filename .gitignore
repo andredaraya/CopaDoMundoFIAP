@@ -304,3 +304,10 @@ __pycache__/
 *.vs/
 
 *deploy/
+
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
