@@ -9,9 +9,14 @@ namespace CopaDoMundo.Web.AutoMapper
         public WebMappingProfile()
         {
             CreateMap<JogadorDTO, JogadorViewModel>()
-                .ReverseMap().ForMember(dto => dto.CriadoEm, opt => opt.Ignore());
-            CreateMap<SelecaoDTO, SelecaoViewModel>()
-                .ReverseMap()
+                .ForMember(vw => vw.SelecaoEscolhida, opt => opt.Ignore())
+                .ForMember(vw => vw.Selecoes, opt => opt.Ignore());
+            CreateMap<JogadorViewModel,JogadorDTO >()
+                .ForMember(dto => dto.CriadoEm, opt => opt.Ignore());
+
+            CreateMap<SelecaoDTO, SelecaoViewModel>();
+
+            CreateMap<SelecaoViewModel, SelecaoDTO>()
                 .ForMember(dto => dto.CriadoEm, opt => opt.Ignore());
         }
     }

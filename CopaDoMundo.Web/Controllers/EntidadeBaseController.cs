@@ -20,7 +20,7 @@ namespace CopaDoMundo.Web.Controllers
         }
 
 
-        public IActionResult Listar()
+        public virtual IActionResult Listar()
         {
             var lista = _servico.BuscarTodos();
             var entidadesMapeadas = Mapper.Map<IEnumerable<TEntidadeViewModel>>(lista);
@@ -28,7 +28,7 @@ namespace CopaDoMundo.Web.Controllers
             return View(entidadesMapeadas);
         }
 
-        public IActionResult Datalhes(int id)
+        public virtual IActionResult Datalhes(int id)
         {
             var entidade = _servico.BuscarPorId(id);
             var entidadeMapeada = Mapper.Map<TEntidadeViewModel>(entidade);
@@ -36,7 +36,7 @@ namespace CopaDoMundo.Web.Controllers
             return View(entidadeMapeada);
         }
 
-        public IActionResult Criar()
+        public virtual IActionResult Criar()
         {
             return View();
         }

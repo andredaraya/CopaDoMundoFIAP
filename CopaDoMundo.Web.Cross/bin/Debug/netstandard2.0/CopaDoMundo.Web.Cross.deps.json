@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "417b445c0bf883482649f51e78127a347e232834"
+    "signature": "51cdd7bf0d2558af0660e0f268402372cb13daf1"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,12 +10,22 @@
       "CopaDoMundo.Web.Cross/1.0.0": {
         "dependencies": {
           "AutoMapper": "6.2.2",
+          "Autofac": "4.8.0",
           "CopaDoMundo.Web.Servico": "1.0.0",
-          "NETStandard.Library": "2.0.1",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0.0"
+          "Microsoft.Extensions.Configuration": "2.0.1",
+          "NETStandard.Library": "2.0.1"
         },
         "runtime": {
           "CopaDoMundo.Web.Cross.dll": {}
+        }
+      },
+      "Autofac/4.8.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.1",
+          "System.ComponentModel": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
         }
       },
       "AutoMapper/6.2.2": {
@@ -34,6 +44,21 @@
         },
         "runtime": {
           "lib/netstandard1.3/AutoMapper.dll": {}
+        }
+      },
+      "Flurl/2.7.1": {
+        "runtime": {
+          "lib/netstandard2.0/Flurl.dll": {}
+        }
+      },
+      "Flurl.Http/2.3.1": {
+        "dependencies": {
+          "Flurl": "2.7.1",
+          "Newtonsoft.Json": "11.0.1",
+          "System.Text.Encoding.CodePages": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Flurl.Http.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -59,11 +84,40 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
+      "Microsoft.Extensions.Configuration/2.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "NETStandard.Library/2.0.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/11.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -362,6 +416,11 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -402,6 +461,11 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Text.Encoding.CodePages/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        }
+      },
       "System.Text.RegularExpressions/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -432,13 +496,13 @@
         }
       },
       "CopaDoMundo.Web.Servico/1.0.0": {
+        "dependencies": {
+          "Flurl": "2.7.1",
+          "Flurl.Http": "2.3.1",
+          "Microsoft.Extensions.Configuration": "2.0.1"
+        },
         "runtime": {
           "CopaDoMundo.Web.Servico.dll": {}
-        }
-      },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0.0": {
-        "runtime": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       }
     }
@@ -449,6 +513,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Autofac/4.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4U+vKK+a/JPF9Qo487NeR2MXG6NBkfbA77RSp4NMiZ5EkyjSsRnNtYp9HvLGBJNrYWNY2mMul9yYyHWipZ5TFw==",
+      "path": "autofac/4.8.0",
+      "hashPath": "autofac.4.8.0.nupkg.sha512"
+    },
     "AutoMapper/6.2.2": {
       "type": "package",
       "serviceable": true,
@@ -456,12 +527,47 @@
       "path": "automapper/6.2.2",
       "hashPath": "automapper.6.2.2.nupkg.sha512"
     },
+    "Flurl/2.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NnahoftiHIzZQpDE6MZeQzbFNYYY9X4B97W/IMIYANBMsGWboAX9iO/zYtBFeyL7wFlpwT+nPp9SqTCq6tdh6g==",
+      "path": "flurl/2.7.1",
+      "hashPath": "flurl.2.7.1.nupkg.sha512"
+    },
+    "Flurl.Http/2.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GJlwB7qKi3VtDtSyG/VteWSQEqWefHAj84dHRP3p/7cyNSGFNtIb5dN2K9GzMgc4QIR8DpMalk6KfyQFLFuvsQ==",
+      "path": "flurl.http/2.3.1",
+      "hashPath": "flurl.http.2.3.1.nupkg.sha512"
+    },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-P+MBhIM0YX+JqROuf7i306ZLJEjQYA9uUyRDE+OqwUI5sh41e2ZbPQV3LfAPh+29cmceE1pUffXsGfR4eMY3KA==",
       "path": "microsoft.csharp/4.3.0",
       "hashPath": "microsoft.csharp.4.3.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d9fFoEYRaBccu/Z2B2BZCil/lEnmoVQ8YiY1dGViERh0qWjixgR9y/M7EGaoTrAunnmvAmfwxuij/gCq6WvL1w==",
+      "path": "microsoft.extensions.configuration/2.0.1",
+      "hashPath": "microsoft.extensions.configuration.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-stGq1c136UUYOsgQuJ5fjiygqZhgt6Kj0pm4iL0qq1MICNgEKTJ4tnbXLkZfrDHDz+olsT2VY9cVv2yshg+m+A==",
+      "path": "microsoft.extensions.configuration.abstractions/2.0.1",
+      "hashPath": "microsoft.extensions.configuration.abstractions.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ukg53qNlqTrK38WA30b5qhw0GD7y3jdI9PHHASjdKyTcBHTevFM2o23tyk3pWCgAV27Bbkm+CPQ2zUe1ZOuYSA==",
+      "path": "microsoft.extensions.primitives/2.0.0",
+      "hashPath": "microsoft.extensions.primitives.2.0.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -483,6 +589,13 @@
       "sha512": "sha512-oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
       "path": "netstandard.library/2.0.1",
       "hashPath": "netstandard.library.2.0.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pNN4l+J6LlpIvHOeNdXlwxv39NPJ2B5klz+Rd2UQZIx30Squ5oND1Yy3wEAUoKn0GPUj6Yxt9lxlYWQqfZcvKg==",
+      "path": "newtonsoft.json/11.0.1",
+      "hashPath": "newtonsoft.json.11.0.1.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -666,6 +779,13 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
+    "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==",
+      "path": "system.runtime.compilerservices.unsafe/4.4.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
+    },
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -701,6 +821,13 @@
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
     },
+    "System.Text.Encoding.CodePages/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
+      "path": "system.text.encoding.codepages/4.4.0",
+      "hashPath": "system.text.encoding.codepages.4.4.0.nupkg.sha512"
+    },
     "System.Text.RegularExpressions/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -724,11 +851,6 @@
     },
     "CopaDoMundo.Web.Servico/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

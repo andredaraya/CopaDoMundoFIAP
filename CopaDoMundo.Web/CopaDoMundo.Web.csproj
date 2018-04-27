@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
   </ItemGroup>
@@ -15,7 +16,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CopaDoMundo.Web.Cross\CopaDoMundo.Web.Cross.csproj" />
-    <ProjectReference Include="..\CopaDoMundo.Web.Dominio\CopaDoMundo.Web.Servico.csproj" />
+    <ProjectReference Include="..\CopaDoMundo.Web.Servico\CopaDoMundo.Web.Servico.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Selecoes\" />
   </ItemGroup>
 
 </Project>

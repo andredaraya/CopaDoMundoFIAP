@@ -1,36 +1,38 @@
-﻿using CopaDoMundo.Web.AutoMapper;
+﻿using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using CopaDoMundo.Web.AutoMapper;
 using CopaDoMundo.Web.Cross.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Reflection;
 
 namespace CopaDoMundo.Web
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
+        public IConfigurationRoot Configuration { get; }
 
         public Startup(IHostingEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                .AddEnvironmentVariables();
-            Configuration = builder.Build();
-
             ConfiguracaoMap.Configure();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
             services.AddMvc();
 
-            //Injeção de independencia (serviços)
-            DIContainer.RegistrarDependencias(services);
+            var builder = new ContainerBuilder();
+            builder.Register<IConfiguration>(x => Configuration);
+            builder.Populate(services);
+
+            var appContainer = InitializeContainer(builder);
+
+            return appContainer.Resolve<IServiceProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +66,13 @@ namespace CopaDoMundo.Web
                       template: "Selecoes/{id?}",
                       defaults: new { controller = "Selecoes", action = "Index" });
             });
+        }
+
+        private IContainer InitializeContainer(ContainerBuilder builder)
+        {
+            var copaDoMundoAssembly = typeof(CopaDoMundoModule).GetTypeInfo().Assembly;
+            builder.RegisterAssemblyModules(copaDoMundoAssembly);
+            return builder.Build();
         }
     }
 }

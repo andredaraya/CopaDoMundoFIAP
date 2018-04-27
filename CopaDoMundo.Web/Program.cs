@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+using System.IO;
 
 namespace CopaDoMundo.Web
 {
@@ -14,12 +8,24 @@ namespace CopaDoMundo.Web
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
-        }
+            var host = new WebHostBuilder()
+                 .UseKestrel()
+                 .UseContentRoot(Directory.GetCurrentDirectory())
+                 .ConfigureAppConfiguration((hostingContext, config) =>
+                 {
+                     var env = hostingContext.HostingEnvironment;
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+                     config.AddJsonFile("appsettings.json", optional: true)
+                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+
+                     config.AddEnvironmentVariables();
+                 })
+                 .UseIISIntegration()
+                 .UseStartup<Startup>()
+                 .UseApplicationInsights()
+                 .Build();
+
+            host.Run();
+        }
     }
 }

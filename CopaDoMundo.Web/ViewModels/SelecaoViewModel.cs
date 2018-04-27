@@ -5,6 +5,11 @@ namespace CopaDoMundo.Web.ViewModels
 {
     public class SelecaoViewModel
     {
+        public SelecaoViewModel()
+        {
+            this.Jogadores = new List<JogadorViewModel>();
+        }
+
         [Key]
         public int ID { get; set; }
 
@@ -13,6 +18,6 @@ namespace CopaDoMundo.Web.ViewModels
 
         public int QuantidadeTitulos { get; set; }
 
-        public virtual IEnumerable<JogadorViewModel> Jogadores { get; set; }
+        public virtual IList<JogadorViewModel> Jogadores { get; set; }
     }
 }
