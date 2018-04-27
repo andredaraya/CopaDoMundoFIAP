@@ -1,6 +1,10 @@
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Cross.deps.json
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Cross.dll
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Cross.pdb
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Servico.dll
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Servico.pdb
+C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.xml
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.csprojResolveAssemblyReference.cache
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.csproj.CoreCompileInputs.cache
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.AssemblyInfoInputs.cache

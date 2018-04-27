@@ -1,4 +1,4 @@
-﻿using CopaDoMundo.Web.Cross.DTO;
+﻿using CopaDoMundo.Web.Servico.DTO;
 using System.Collections.Generic;
 
 namespace CopaDoMundo.Web.Servico.Interfaces

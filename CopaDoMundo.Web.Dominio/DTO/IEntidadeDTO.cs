@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CopaDoMundo.Web.Cross.DTO
+namespace CopaDoMundo.Web.Servico.DTO
 {
     public interface IEntidadeDTO
     {

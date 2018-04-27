@@ -24,7 +24,7 @@
       "CopaDoMundo.Web/1.0.0": {
         "dependencies": {
           "CopaDoMundo.Web.Cross": "1.0.0",
-          "CopaDoMundo.Web.Dominio": "1.0.0",
+          "CopaDoMundo.Web.Servico": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.6",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.1"
@@ -4078,7 +4078,8 @@
       },
       "CopaDoMundo.Web.Cross/1.0.0": {
         "dependencies": {
-          "AutoMapper": "6.2.2"
+          "AutoMapper": "6.2.2",
+          "CopaDoMundo.Web.Servico": "1.0.0"
         },
         "runtime": {
           "CopaDoMundo.Web.Cross.dll": {}
@@ -4087,15 +4088,12 @@
           "CopaDoMundo.Web.Cross.dll": {}
         }
       },
-      "CopaDoMundo.Web.Dominio/1.0.0": {
-        "dependencies": {
-          "CopaDoMundo.Web.Cross": "1.0.0"
-        },
+      "CopaDoMundo.Web.Servico/1.0.0": {
         "runtime": {
-          "CopaDoMundo.Web.Dominio.dll": {}
+          "CopaDoMundo.Web.Servico.dll": {}
         },
         "compile": {
-          "CopaDoMundo.Web.Dominio.dll": {}
+          "CopaDoMundo.Web.Servico.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.0.0": {
@@ -6422,7 +6420,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CopaDoMundo.Web.Dominio/1.0.0": {
+    "CopaDoMundo.Web.Servico/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

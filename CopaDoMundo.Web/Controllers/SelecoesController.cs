@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using CopaDoMundo.Web.Cross.DTO;
-using CopaDoMundo.Web.Dominio.Interfaces.Servicos;
+using CopaDoMundo.Web.Servico.DTO;
+using CopaDoMundo.Web.Servico.Interfaces;
 using CopaDoMundo.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;

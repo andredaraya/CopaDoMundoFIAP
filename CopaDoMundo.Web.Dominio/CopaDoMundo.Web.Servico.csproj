@@ -6,8 +6,4 @@
     <RootNamespace>CopaDoMundo.Web.Servico</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CopaDoMundo.Web.Cross\CopaDoMundo.Web.Cross.csproj" />
-  </ItemGroup>
-
 </Project>

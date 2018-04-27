@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CopaDoMundo.Web.Cross.DTO
+namespace CopaDoMundo.Web.Servico.DTO
 {
     public class SelecaoDTO : IEntidadeDTO
     {
