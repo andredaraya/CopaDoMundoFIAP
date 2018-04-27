@@ -19,8 +19,4 @@
     <ProjectReference Include="..\CopaDoMundo.Web.Servico\CopaDoMundo.Web.Servico.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Selecoes\" />
-  </ItemGroup>
-
 </Project>

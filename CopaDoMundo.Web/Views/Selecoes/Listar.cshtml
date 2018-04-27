@@ -1,0 +1,49 @@
+﻿@model List<SelecaoViewModel>
+
+@{
+    var temSelecao = Model != null && Model.Any();
+
+    ViewData["Title"] = "Seleções";
+}
+
+<h2>Lista de Seleções</h2>
+<hr />
+
+@if (ViewBag.Error != null && ViewBag.Error)
+{
+    <div class="alert alert-danger alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Erro!</strong> Deu ruim!
+    </div>
+}
+
+@if (temSelecao)
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Títulos</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>@item.QuantidadeTitulos</td>
+                    <td>
+                        <a style="padding-right: 5px" class="btn btn-primary" href="~/Selecoes/@item.ID">EDITAR &raquo;</a>
+                        <a class="btn btn-primary" href="~/Selecoes/Deletar/@item.ID">REMOVER &raquo;</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="row">
+
+    </div>
+}

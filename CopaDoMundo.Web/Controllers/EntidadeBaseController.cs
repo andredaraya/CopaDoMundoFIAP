@@ -9,7 +9,7 @@ namespace CopaDoMundo.Web.Controllers
 {
     public class EntidadeBaseController<TServico, TEntidadeDTO, TEntidadeViewModel> : Controller
         where TServico : IServicoBase<TEntidadeDTO>
-        where TEntidadeDTO : IEntidadeDTO
+        where TEntidadeDTO : EntidadeDTO
         where TEntidadeViewModel : class
     {
         private readonly TServico _servico;
@@ -22,7 +22,7 @@ namespace CopaDoMundo.Web.Controllers
 
         public virtual IActionResult Listar()
         {
-            var lista = _servico.BuscarTodos();
+            var lista = _servico.BuscarTodos().Result;
             var entidadesMapeadas = Mapper.Map<IEnumerable<TEntidadeViewModel>>(lista);
 
             return View(entidadesMapeadas);
@@ -30,7 +30,7 @@ namespace CopaDoMundo.Web.Controllers
 
         public virtual IActionResult Datalhes(int id)
         {
-            var entidade = _servico.BuscarPorId(id);
+            var entidade = _servico.BuscarPorId(id).Result;
             var entidadeMapeada = Mapper.Map<TEntidadeViewModel>(entidade);
 
             return View(entidadeMapeada);
@@ -58,7 +58,7 @@ namespace CopaDoMundo.Web.Controllers
         // GET: entity/Edit/5
         public IActionResult Editar(int id)
         {
-            var entidade = _servico.BuscarPorId(id);
+            var entidade = _servico.BuscarPorId(id).Result;
             var entidadeMapeada = Mapper.Map<TEntidadeViewModel>(entidade);
 
             return View(entidadeMapeada);
@@ -80,7 +80,7 @@ namespace CopaDoMundo.Web.Controllers
 
         public IActionResult Deletar(int id)
         {
-            var entidade = _servico.BuscarPorId(id);
+            var entidade = _servico.BuscarPorId(id).Result;
             var entidadeMapeada = Mapper.Map<TEntidadeViewModel>(entidade);
 
             return View(entidadeMapeada);

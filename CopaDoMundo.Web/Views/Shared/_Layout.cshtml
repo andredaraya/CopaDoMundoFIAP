@@ -19,12 +19,11 @@
 <body>
     @Html.Partial("_Menu")
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - Copa Do Mundo</p>
-        </footer>
+    <div class="container">
+        <br />
+        <div class="body-content">
+            @RenderBody()
+        </div>
     </div>
 
     <environment include="Development">

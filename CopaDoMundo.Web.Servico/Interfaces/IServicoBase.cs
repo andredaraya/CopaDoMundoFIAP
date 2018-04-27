@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace CopaDoMundo.Web.Servico.Interfaces
 {
-    public interface IServicoBase<TEntidadeDTO> where TEntidadeDTO : IEntidadeDTO
+    public interface IServicoBase<TEntidadeDTO> where TEntidadeDTO : EntidadeDTO
     {
         Task Add(TEntidadeDTO entity);
         Task<TEntidadeDTO> BuscarPorId(int id);

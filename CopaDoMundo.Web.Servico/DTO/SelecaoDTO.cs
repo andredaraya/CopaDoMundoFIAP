@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CopaDoMundo.Web.Servico.DTO
 {
-    public class SelecaoDTO : IEntidadeDTO
+    public class SelecaoDTO : EntidadeDTO
     {
         public SelecaoDTO()
         {
@@ -14,7 +14,5 @@ namespace CopaDoMundo.Web.Servico.DTO
         public string Nome { get; set; }
         public int QuantidadeTitulos { get; set; }
         public virtual IList<JogadorDTO> Jogadores { get; set; }
-        public DateTime CriadoEm { get; set; }
-        public bool Ativo { get; set; }
     }
 }

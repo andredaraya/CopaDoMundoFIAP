@@ -9,3 +9,14 @@ C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoM
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Servico.pdb
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.dll
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.pdb
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Cross.deps.json
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Cross.dll
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Cross.pdb
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Servico.dll
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Servico.pdb
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.csprojResolveAssemblyReference.cache
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.csproj.CoreCompileInputs.cache
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.AssemblyInfoInputs.cache
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.AssemblyInfo.cs
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.dll
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.pdb

@@ -2,7 +2,7 @@
 
 namespace CopaDoMundo.Web.Servico.DTO
 {
-    public class JogadorDTO : IEntidadeDTO
+    public class JogadorDTO : EntidadeDTO
     {
         public int ID { get; set; }
         public string Nome { get; set; }
@@ -10,7 +10,5 @@ namespace CopaDoMundo.Web.Servico.DTO
         public int Idade { get; set; }
         public string Posicao { get; set; }
         public SelecaoDTO Selecao { get; set; }
-        public DateTime CriadoEm { get; set; }
-        public bool Ativo { get; set; }
     }
 }

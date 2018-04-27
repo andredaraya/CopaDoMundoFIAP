@@ -20,3 +20,14 @@ C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoM
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.AssemblyInfo.cs
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.dll
 C:\Users\andre.quedinho\Documents\André\Pessoal\MBA\Desenvolvimento Web\CopaDoMundo\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.pdb
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\bin\Debug\netcoreapp2.0\CopaDoMundo.WebApi.deps.json
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\bin\Debug\netcoreapp2.0\CopaDoMundo.WebApi.runtimeconfig.json
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\bin\Debug\netcoreapp2.0\CopaDoMundo.WebApi.runtimeconfig.dev.json
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\bin\Debug\netcoreapp2.0\CopaDoMundo.WebApi.dll
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\bin\Debug\netcoreapp2.0\CopaDoMundo.WebApi.pdb
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.csprojResolveAssemblyReference.cache
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.csproj.CoreCompileInputs.cache
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.AssemblyInfoInputs.cache
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.AssemblyInfo.cs
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.dll
+G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.pdb

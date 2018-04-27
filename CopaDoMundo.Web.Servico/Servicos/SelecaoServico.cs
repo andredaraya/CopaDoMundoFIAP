@@ -34,6 +34,17 @@ namespace CopaDoMundo.Web.Servico.Servicos
 
         public async Task<SelecaoDTO> BuscarPorId(int id)
         {
+            var temp = new SelecaoDTO()
+            {
+                ID = 1,
+                Ativo = true,
+                CriadoEm = DateTime.Now,
+                Nome = "Brasil",
+                QuantidadeTitulos = 5
+            };
+
+            return temp;
+
             return await this._options.BuscarPorId
                                       .SetQueryParams(id)
                                       .WithHeader("Cache-Control", "no-cache")
@@ -42,6 +53,27 @@ namespace CopaDoMundo.Web.Servico.Servicos
 
         public async Task<IEnumerable<SelecaoDTO>> BuscarTodos()
         {
+            List<SelecaoDTO> listTEmp = new List<SelecaoDTO>();
+            listTEmp.Add(new SelecaoDTO()
+            {
+                ID = 1,
+                Ativo = true,
+                CriadoEm = DateTime.Now,
+                Nome = "Brasil",
+                QuantidadeTitulos = 5
+            });
+
+            listTEmp.Add(new SelecaoDTO()
+            {
+                ID = 2,
+                Ativo = true,
+                CriadoEm = DateTime.Now,
+                Nome = "Argentina",
+                QuantidadeTitulos = 4
+            });
+
+            return listTEmp;
+
             return await this._options.BuscarTodos
                                      .WithHeader("Cache-Control", "no-cache")
                                      .GetJsonAsync<IEnumerable<SelecaoDTO>>();

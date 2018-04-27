@@ -37,7 +37,7 @@ namespace CopaDoMundo.Web.Controllers
 
         public IActionResult Index(int id)
         {
-            var jogador = _jogadorServico.BuscarPorId(id);
+            var jogador = _jogadorServico.BuscarPorId(id).Result;
             var jogadorMapeado = Mapper.Map<JogadorViewModel>(jogador);
 
             return View(jogadorMapeado);
