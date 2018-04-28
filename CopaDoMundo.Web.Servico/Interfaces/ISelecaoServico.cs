@@ -1,11 +1,11 @@
-﻿using CopaDoMundo.Web.Servico.DTO;
+﻿using CopaDoMundo.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CopaDoMundo.Web.Servico.Interfaces
 {
-    public interface ISelecaoServico : IServicoBase<SelecaoDTO>
+    public interface ISelecaoServico : IServicoBase<Selecao>
     {
-        Task<IEnumerable<SelecaoDTO>> BuscarTodosAtivos();
+        Task<IEnumerable<Selecao>> BuscarTodosAtivos();
     }
 }

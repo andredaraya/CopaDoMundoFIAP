@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CopaDoMundo.Web.Servico.DTO;
+using CopaDoMundo.Model;
 using CopaDoMundo.Web.Servico.Interfaces;
 using CopaDoMundo.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace CopaDoMundo.Web.Controllers
 {
-    public class SelecoesController : EntidadeBaseController<ISelecaoServico, SelecaoDTO, SelecaoViewModel>
+    public class SelecoesController : EntidadeBaseController<ISelecaoServico, Selecao, SelecaoViewModel>
     {
         private readonly ISelecaoServico _servico;
         private readonly IJogadorServico _jogadorServico;

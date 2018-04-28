@@ -700,10 +700,21 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
+      "CopaDoMundo.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CopaDoMundo.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CopaDoMundo.Model.dll": {}
+        }
+      },
       "CopaDoMundo.Web.Servico/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CopaDoMundo.Model": "1.0.0",
           "Flurl": "2.7.1",
           "Flurl.Http": "2.3.1",
           "Microsoft.Extensions.Configuration": "2.0.1"
@@ -3222,6 +3233,11 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "CopaDoMundo.Model/1.0.0": {
+      "type": "project",
+      "path": "../CopaDoMundo.Entidades/CopaDoMundo.Model.csproj",
+      "msbuildProject": "../CopaDoMundo.Entidades/CopaDoMundo.Model.csproj"
+    },
     "CopaDoMundo.Web.Servico/1.0.0": {
       "type": "project",
       "path": "../CopaDoMundo.Web.Servico/CopaDoMundo.Web.Servico.csproj",
@@ -3311,13 +3327,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\obj\\CopaDoMundo.Web.Cross.csproj.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
