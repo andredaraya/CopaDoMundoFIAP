@@ -78,17 +78,47 @@ namespace CopaDoMundo.Web.Servico.Servicos
 
             return listTemp;
 
-            return await this._options.BuscarPorselecao
-                                     .SetQueryParams(selecaoId)
-                                     .WithHeader("Cache-Control", "no-cache")
-                                     .GetJsonAsync<IEnumerable<JogadorDTO>>();
+            //Utilizar esse código para chamar a API
+            //return await this._options.BuscarPorselecao
+            //                         .SetQueryParams(selecaoId)
+            //                         .WithHeader("Cache-Control", "no-cache")
+            //                         .GetJsonAsync<IEnumerable<JogadorDTO>>();
         }
 
         public async Task<IEnumerable<JogadorDTO>> BuscarTodos()
         {
-            return await this._options.BuscarTodos
-                                     .WithHeader("Cache-Control", "no-cache")
-                                     .GetJsonAsync<IEnumerable<JogadorDTO>>();
+            List<JogadorDTO> listTemp = new List<JogadorDTO>();
+            listTemp.Add(new JogadorDTO()
+            {
+                ID = 1,
+                Nome = "Alejo",
+                Apelido = "Gornaldo",
+                Idade = 35,
+                Posicao = "Centro Avante", //descrição que virá do banco
+                Ativo = true,
+                CriadoEm = DateTime.Now,
+                Selecao = 1
+
+            });
+
+            listTemp.Add(new JogadorDTO()
+            {
+                ID = 2,
+                Nome = "Garrincha",
+                Apelido = "Torto",
+                Idade = 90,
+                Posicao = "Centro Avante", //descrição que virá do banco
+                Ativo = true,
+                CriadoEm = DateTime.Now,
+                Selecao = 1
+
+            });
+
+            return listTemp;
+            //Utilizar esse código para chamar a API
+            //return await this._options.BuscarTodos
+            //                         .WithHeader("Cache-Control", "no-cache")
+            //                         .GetJsonAsync<IEnumerable<JogadorDTO>>();
         }
 
         public async Task Remover(int id)

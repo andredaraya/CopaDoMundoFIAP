@@ -31,3 +31,14 @@ G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo
 G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.AssemblyInfo.cs
 G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.dll
 G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.pdb
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\bin\Debug\netcoreapp2.0\CopaDoMundo.WebApi.deps.json
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\bin\Debug\netcoreapp2.0\CopaDoMundo.WebApi.runtimeconfig.json
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\bin\Debug\netcoreapp2.0\CopaDoMundo.WebApi.runtimeconfig.dev.json
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\bin\Debug\netcoreapp2.0\CopaDoMundo.WebApi.dll
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\bin\Debug\netcoreapp2.0\CopaDoMundo.WebApi.pdb
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.csproj.CoreCompileInputs.cache
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.AssemblyInfoInputs.cache
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.AssemblyInfo.cs
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.dll
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.pdb
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.WebApi\obj\Debug\netcoreapp2.0\CopaDoMundo.WebApi.csprojResolveAssemblyReference.cache

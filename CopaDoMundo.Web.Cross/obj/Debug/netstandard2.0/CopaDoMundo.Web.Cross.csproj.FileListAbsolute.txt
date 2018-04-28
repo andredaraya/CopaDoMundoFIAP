@@ -20,3 +20,15 @@ G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo
 G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.AssemblyInfo.cs
 G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.dll
 G:\Users\De\Documents\André\MBA\Desenvolvimento Web\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.pdb
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Cross.deps.json
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Cross.dll
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Cross.pdb
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Servico.dll
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\bin\Debug\netstandard2.0\CopaDoMundo.Web.Servico.pdb
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.csprojResolveAssemblyReference.cache
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.csproj.CoreCompileInputs.cache
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.AssemblyInfoInputs.cache
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.AssemblyInfo.cs
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.csproj.CopyComplete
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.dll
+F:\Source\FIAP\Web\Copa\CopaDoMundoFIAP\CopaDoMundo.Web.Cross\obj\Debug\netstandard2.0\CopaDoMundo.Web.Cross.pdb

@@ -10,9 +10,7 @@ namespace CopaDoMundo.Web.Controllers
     {
         public IActionResult Index()
         {
-            List<SelecaoViewModel> selecoes = new List<SelecaoViewModel>();
-
-            return View(selecoes);
+            return View();
         }
 
         public IActionResult Contact()
