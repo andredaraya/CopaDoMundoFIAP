@@ -700,10 +700,21 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
+      "CopaDoMundo.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CopaDoMundo.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CopaDoMundo.Model.dll": {}
+        }
+      },
       "CopaDoMundo.Web.Servico/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CopaDoMundo.Model": "1.0.0",
           "Flurl": "2.7.1",
           "Flurl.Http": "2.3.1",
           "Microsoft.Extensions.Configuration": "2.0.1"
@@ -3222,6 +3233,11 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "CopaDoMundo.Model/1.0.0": {
+      "type": "project",
+      "path": "../CopaDoMundo.Entidades/CopaDoMundo.Model.csproj",
+      "msbuildProject": "../CopaDoMundo.Entidades/CopaDoMundo.Model.csproj"
+    },
     "CopaDoMundo.Web.Servico/1.0.0": {
       "type": "project",
       "path": "../CopaDoMundo.Web.Servico/CopaDoMundo.Web.Servico.csproj",
@@ -3238,28 +3254,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre.quedinho\\.nuget\\packages\\": {},
+    "C:\\Users\\Felipe\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre.quedinho\\Documents\\André\\Pessoal\\MBA\\Desenvolvimento Web\\CopaDoMundo\\CopaDoMundo.Web.Cross\\CopaDoMundo.Web.Cross.csproj",
+      "projectUniqueName": "C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\CopaDoMundo.Web.Cross.csproj",
       "projectName": "CopaDoMundo.Web.Cross",
-      "projectPath": "C:\\Users\\andre.quedinho\\Documents\\André\\Pessoal\\MBA\\Desenvolvimento Web\\CopaDoMundo\\CopaDoMundo.Web.Cross\\CopaDoMundo.Web.Cross.csproj",
-      "packagesPath": "C:\\Users\\andre.quedinho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre.quedinho\\Documents\\André\\Pessoal\\MBA\\Desenvolvimento Web\\CopaDoMundo\\CopaDoMundo.Web.Cross\\obj\\",
+      "projectPath": "C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\CopaDoMundo.Web.Cross.csproj",
+      "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\andre.quedinho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -3268,16 +3281,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://dev-nuget.wappa.com.br/nuget/": {},
-        "http://hm-nuget.wappa.com.br/nuget/": {},
-        "http://nuget.wappa.com.br/nuget/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\andre.quedinho\\Documents\\André\\Pessoal\\MBA\\Desenvolvimento Web\\CopaDoMundo\\CopaDoMundo.Web.Servico\\CopaDoMundo.Web.Servico.csproj": {
-              "projectPath": "C:\\Users\\andre.quedinho\\Documents\\André\\Pessoal\\MBA\\Desenvolvimento Web\\CopaDoMundo\\CopaDoMundo.Web.Servico\\CopaDoMundo.Web.Servico.csproj"
+            "C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Servico\\CopaDoMundo.Web.Servico.csproj": {
+              "projectPath": "C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Servico\\CopaDoMundo.Web.Servico.csproj"
             }
           }
         }

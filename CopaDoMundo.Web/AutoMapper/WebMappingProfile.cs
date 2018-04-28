@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CopaDoMundo.Web.Servico.DTO;
+using CopaDoMundo.Model;
 using CopaDoMundo.Web.ViewModels;
 
 namespace CopaDoMundo.Web.AutoMapper
@@ -8,16 +8,16 @@ namespace CopaDoMundo.Web.AutoMapper
     {
         public WebMappingProfile()
         {
-            CreateMap<JogadorDTO, JogadorViewModel>()
+            CreateMap<Jogador, JogadorViewModel>()
                 .ForMember(vw => vw.SelecaoEscolhida, opt => opt.Ignore())
                 .ForMember(vw => vw.Selecoes, opt => opt.Ignore());
-            CreateMap<JogadorViewModel,JogadorDTO >()
-                .ForMember(dto => dto.CriadoEm, opt => opt.Ignore());
+            CreateMap<JogadorViewModel,Jogador >()
+                .ForMember( jogador => jogador.CriadoEm, opt => opt.Ignore());
 
-            CreateMap<SelecaoDTO, SelecaoViewModel>();
+            CreateMap<Selecao, SelecaoViewModel>();
 
-            CreateMap<SelecaoViewModel, SelecaoDTO>()
-                .ForMember(dto => dto.CriadoEm, opt => opt.Ignore());
+            CreateMap<SelecaoViewModel, Selecao>()
+                .ForMember(jogador => jogador.CriadoEm, opt => opt.Ignore());
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CopaDoMundo.Web.Servico.DTO;
+using CopaDoMundo.Model;
 using CopaDoMundo.Web.Servico.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -7,9 +7,9 @@ using System.Collections.Generic;
 
 namespace CopaDoMundo.Web.Controllers
 {
-    public class EntidadeBaseController<TServico, TEntidadeDTO, TEntidadeViewModel> : Controller
-        where TServico : IServicoBase<TEntidadeDTO>
-        where TEntidadeDTO : IEntidadeDTO
+    public class EntidadeBaseController<TServico, TEntidade, TEntidadeViewModel> : Controller
+        where TServico : IServicoBase<TEntidade>
+        where TEntidade : EntidadeBase
         where TEntidadeViewModel : class
     {
         private readonly TServico _servico;
@@ -47,7 +47,7 @@ namespace CopaDoMundo.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entidadeMapeada = Mapper.Map<TEntidadeDTO>(entidade);
+                var entidadeMapeada = Mapper.Map<TEntidade>(entidade);
                 entidadeMapeada.CriadoEm = DateTime.Now;
                 _servico.Add(entidadeMapeada);
             }
@@ -70,7 +70,7 @@ namespace CopaDoMundo.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entidadeMapeada = Mapper.Map<TEntidadeDTO>(entidade);
+                var entidadeMapeada = Mapper.Map<TEntidade>(entidade);
                 entidadeMapeada.CriadoEm = DateTime.Now;
                 _servico.Atualizar(entidadeMapeada);
             }

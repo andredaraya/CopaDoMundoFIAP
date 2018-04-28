@@ -11,4 +11,8 @@
     <PackageReference Include="Flurl.Http" Version="2.3.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CopaDoMundo.Entidades\CopaDoMundo.Model.csproj" />
+  </ItemGroup>
 </Project>

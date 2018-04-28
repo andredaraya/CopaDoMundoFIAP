@@ -1,4 +1,4 @@
-﻿using CopaDoMundo.Web.Servico.DTO;
+﻿using CopaDoMundo.Model;
 using CopaDoMundo.Web.Servico.Interfaces;
 using CopaDoMundo.Web.Servico.Options;
 using Flurl;
@@ -17,48 +17,48 @@ namespace CopaDoMundo.Web.Servico.Servicos
             this._options = options;
         }
 
-        public async Task Add(JogadorDTO entidade)
+        public async Task Add(Jogador entidade)
         {
             await this._options.Adicionar
                                .WithHeader("Cache-Control", "no-cache")
                                .PostJsonAsync(entidade);
         }
 
-        public async Task Atualizar(JogadorDTO entidade)
+        public async Task Atualizar(Jogador entidade)
         {
             await this._options.Atualizar
                                .WithHeader("Cache-Control", "no-cache")
                                .PostJsonAsync(entidade);
         }
 
-        public async Task<JogadorDTO> BuscarPorId(int id)
+        public async Task<Jogador> BuscarPorId(int id)
         {
             return await this._options.BuscarPorId
                                      .SetQueryParams(id)
                                      .WithHeader("Cache-Control", "no-cache")
-                                     .GetJsonAsync<JogadorDTO>();
+                                     .GetJsonAsync<Jogador>();
         }
 
-        public async Task<IEnumerable<JogadorDTO>> BuscarTodosAtivos()
+        public async Task<IEnumerable<Jogador>> BuscarTodosAtivos()
         {
             return await this._options.BuscarTodosAtivo
                                      .WithHeader("Cache-Control", "no-cache")
-                                     .GetJsonAsync<IEnumerable<JogadorDTO>>();
+                                     .GetJsonAsync<IEnumerable<Jogador>>();
         }
 
-        public async Task<IEnumerable<JogadorDTO>> BuscarPorSelecao(int selecaoId)
+        public async Task<IEnumerable<Jogador>> BuscarPorSelecao(int selecaoId)
         {
             return await this._options.BuscarPorselecao
                                      .SetQueryParams(selecaoId)
                                      .WithHeader("Cache-Control", "no-cache")
-                                     .GetJsonAsync<IEnumerable<JogadorDTO>>();
+                                     .GetJsonAsync<IEnumerable<Jogador>>();
         }
 
-        public async Task<IEnumerable<JogadorDTO>> BuscarTodos()
+        public async Task<IEnumerable<Jogador>> BuscarTodos()
         {
             return await this._options.BuscarTodos
                                      .WithHeader("Cache-Control", "no-cache")
-                                     .GetJsonAsync<IEnumerable<JogadorDTO>>();
+                                     .GetJsonAsync<IEnumerable<Jogador>>();
         }
 
         public async Task Remover(int id)
