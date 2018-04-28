@@ -3238,25 +3238,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\breno\\.nuget\\packages\\": {},
+    "C:\\Users\\Felipe\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Source\\FIAP\\Web\\Copa\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\CopaDoMundo.Web.Cross.csproj",
+      "projectUniqueName": "C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\CopaDoMundo.Web.Cross.csproj",
       "projectName": "CopaDoMundo.Web.Cross",
-      "projectPath": "F:\\Source\\FIAP\\Web\\Copa\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\CopaDoMundo.Web.Cross.csproj",
-      "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
-      "outputPath": "F:\\Source\\FIAP\\Web\\Copa\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\obj\\",
+      "projectPath": "C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\CopaDoMundo.Web.Cross.csproj",
+      "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -3270,8 +3270,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "F:\\Source\\FIAP\\Web\\Copa\\CopaDoMundoFIAP\\CopaDoMundo.Web.Servico\\CopaDoMundo.Web.Servico.csproj": {
-              "projectPath": "F:\\Source\\FIAP\\Web\\Copa\\CopaDoMundoFIAP\\CopaDoMundo.Web.Servico\\CopaDoMundo.Web.Servico.csproj"
+            "C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Servico\\CopaDoMundo.Web.Servico.csproj": {
+              "projectPath": "C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Servico\\CopaDoMundo.Web.Servico.csproj"
             }
           }
         }
@@ -3311,5 +3311,13 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\Felipe\\Source\\Repos\\CopaDoMundoFIAP\\CopaDoMundo.Web.Cross\\obj\\CopaDoMundo.Web.Cross.csproj.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
