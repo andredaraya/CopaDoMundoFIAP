@@ -8,8 +8,6 @@ namespace CopaDoMundo.WebApi.Dados.Interface
 {
     interface IJogadorRepositorio
     {
-        IList<Jogador> BuscaJogadoresPorSelecao(int idSelecao);
-
         void DeletaJogadoresPorSelecao(int idSelecao);
     }
 }

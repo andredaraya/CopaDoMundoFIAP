@@ -10,8 +10,7 @@ namespace CopaDoMundo.WebApi.Dados.Repositorio
 {
     public class SelecaoRepositorio : RepositorioBase, ISelecaoRepositorio
     {
-        public void AtualizarSelecao(Selecao model
-            )
+        public void AtualizarSelecao(Selecao model)
         {
             using (var connection = GetConnection())
             {
