@@ -1,23 +1,24 @@
 ﻿using CopaDoMundo.Model;
 using CopaDoMundo.WebApi.Dados.Interface;
+using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Dapper;
 
 namespace CopaDoMundo.WebApi.Dados.Repositorio
 {
     public class JogadorRepositorio : RepositorioBase, IJogadorRepositorio
-    {       
+    {
 
         public void DeletaJogadoresPorSelecao(int idSelecao)
         {
             using (var connection = GetConnection())
             {
-                connection.Open();
+                var sql = @"DELETE FROM JOGADOR WHERE SELECAO = @IDSELECAO";
+                CommandDefinition command = new CommandDefinition(sql, new { idSelecao = idSelecao });
 
-                connection.Execute($"delete from jogador where selecao = {idSelecao}");
+                connection.Open();
+                connection.Execute(command);
             }
         }
 
@@ -27,7 +28,8 @@ namespace CopaDoMundo.WebApi.Dados.Repositorio
             using (var connection = GetConnection())
             {
                 connection.Open();
-                connection.Execute($"insert into jogador (Nome, Apelido, Idade, Posicao, Selecao, CriadoEm, Ativo) Values(@Nome, @Apelido, @Idade, @Posicao, @Selecao, @CriadoEm, @Ativo)", jogador);
+                connection.Execute(@"INSERT INTO JOGADOR (NOME, APELIDO, IDADE, POSICAO, SELECAO, CRIADOEM, ATIVO) 
+                                    VALUES(@Nome, @Apelido, @Idade, @Posicao, @Selecao, @CriadoEm, @Ativo)", jogador);
             }
         }
 
@@ -36,14 +38,14 @@ namespace CopaDoMundo.WebApi.Dados.Repositorio
             using (var connection = GetConnection())
             {
                 connection.Open();
-                connection.Execute($@"update jogador 
-                                   SET Nome = @Nome,
-                                   Apelido = @Apelido,
-                                   Idade = @Idade,
-                                   Posicao = @Posicao,
-                                   Selecao = @Selecao,
-                                   Ativo = @Ativo
-                                   Where Id= @ID", jogador);
+                connection.Execute(@"UPDATE JOGADOR 
+                                   SET NOME = @Nome,
+                                   APELIDO = @Apelido,
+                                   IDADE = @Idade,
+                                   POSICAO = @Posicao,
+                                   SELECAO = @Selecao,
+                                   ATIVO = @Ativo
+                                   WHERE ID= @ID", jogador);
             }
         }
 
@@ -51,8 +53,11 @@ namespace CopaDoMundo.WebApi.Dados.Repositorio
         {
             using (var connection = GetConnection())
             {
+                var sql = @"DELETE FROM JOGADOR WHERE ID = @id";
+                CommandDefinition command = new CommandDefinition(sql, new { id = id });
+
                 connection.Open();
-                connection.Execute($"DELETE FROM JOGADOR WHERE ID = {id}");
+                connection.Execute(command);
             }
         }
 
@@ -61,9 +66,24 @@ namespace CopaDoMundo.WebApi.Dados.Repositorio
             IList<Jogador> jogadores;
             using (var connection = GetConnection())
             {
-                var sql = $@"select * from jogador";
+                var sql = $@"SELECT * FROM JOGADOR";
                 connection.Open();
                 jogadores = connection.Query<Jogador>(sql).ToList();
+            }
+
+            return jogadores;
+        }
+
+        public IEnumerable<Jogador> BuscarTodosOsJogadoresPorSelecao(int idSelecao)
+        {
+            IList<Jogador> jogadores;
+            using (var connection = GetConnection())
+            {
+                var sql = @"SELECT * FROM JOGADOR WHERE SELECAO = @idSelecao";
+                CommandDefinition command = new CommandDefinition(sql, new { idSelecao = idSelecao });
+
+                connection.Open();
+                jogadores = connection.Query<Jogador>(command).ToList();
             }
 
             return jogadores;
@@ -75,9 +95,10 @@ namespace CopaDoMundo.WebApi.Dados.Repositorio
             using (var connection = GetConnection())
             {
                 connection.Open();
-                string sql = $"select * from jogador where Id = {id}";
+                string sql = @"SELECT * FROM JOGADOR WHERE ID = @id";
+                CommandDefinition command = new CommandDefinition(sql, new { id = id });
 
-                jogador = connection.Query<Jogador>(sql).FirstOrDefault();
+                jogador = connection.Query<Jogador>(command).FirstOrDefault();
             }
 
             return jogador;

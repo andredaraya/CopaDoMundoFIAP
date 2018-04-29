@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CopaDoMundo.Model;
-using CopaDoMundo.WebApi.Dados.Repositorio;
+﻿using CopaDoMundo.Model;
 using CopaDoMundo.WebApi.Servico;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace CopaDoMundo.WebApi.Controllers
 {
@@ -16,6 +11,7 @@ namespace CopaDoMundo.WebApi.Controllers
     {
         // GET: api/Selecao
         [HttpGet]
+        [Route("buscarTodos")]
         public IList<Selecao> Get()
         {
             var servico = new SelecaoServico();
@@ -23,8 +19,9 @@ namespace CopaDoMundo.WebApi.Controllers
         }
 
         // GET: api/Selecao/5
-        [HttpGet("{id}", Name = "Get")]
-        public Selecao Get(int id)
+        [HttpGet]
+        [Route("buscarPorId")]
+        public Selecao Get([FromQuery] int id)
         {
             var servico = new SelecaoServico();
             return servico.BuscaSelecaoPorId(id);
@@ -32,6 +29,7 @@ namespace CopaDoMundo.WebApi.Controllers
 
         // POST: api/Selecao
         [HttpPost]
+        [Route("adicionar")]
         public void Post([FromBody]Selecao value)
         {
             var servico = new SelecaoServico();
@@ -39,17 +37,19 @@ namespace CopaDoMundo.WebApi.Controllers
         }
 
         // PUT: api/Selecao/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]Selecao value)
+        [HttpPost]
+        [Route("atualizar")]
+        public void Put([FromBody]Selecao value)
         {
-            value.ID = id;
+            //value.ID = id;
             var servico = new SelecaoServico();
             servico.AtualizarSelecao(value);
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpPost]
+        [Route("remover")]
+        public void Delete([FromBody] int id)
         {
             var servico = new SelecaoServico();
             servico.DeletarSelecao(id);

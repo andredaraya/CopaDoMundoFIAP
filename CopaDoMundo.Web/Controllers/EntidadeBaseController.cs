@@ -51,7 +51,7 @@ namespace CopaDoMundo.Web.Controllers
             {
                 var entidadeMapeada = Mapper.Map<TEntidade>(entidade);
                 entidadeMapeada.CriadoEm = DateTime.Now;
-                _servico.Add(entidadeMapeada);
+                _servico.Add(entidadeMapeada).Wait();
             }
 
             return RedirectToAction("Listar");
@@ -74,7 +74,7 @@ namespace CopaDoMundo.Web.Controllers
             {
                 var entidadeMapeada = Mapper.Map<TEntidade>(entidade);
                 entidadeMapeada.CriadoEm = DateTime.Now;
-                _servico.Atualizar(entidadeMapeada);
+                _servico.Atualizar(entidadeMapeada).Wait();
             }
 
             return RedirectToAction("Listar");
@@ -92,7 +92,7 @@ namespace CopaDoMundo.Web.Controllers
         [ValidateAntiForgeryToken]
         public virtual IActionResult ConfirmarRemover(int id)
         {
-            _servico.Remover(id);
+            _servico.Remover(id).Wait();
             return RedirectToAction("Listar");
         }
     }

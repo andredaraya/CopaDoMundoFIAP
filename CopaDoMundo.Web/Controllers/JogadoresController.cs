@@ -22,7 +22,7 @@ namespace CopaDoMundo.Web.Controllers
         public override IActionResult Criar()
         {
             JogadorViewModel model = new JogadorViewModel();
-            model.Selecoes = Mapper.Map<List<SelecaoViewModel>>(_selecaoServico.BuscarTodosAtivos().Result);
+            model.Selecoes = Mapper.Map<List<SelecaoViewModel>>(_selecaoServico.BuscarTodos().Result);
 
             return View(model);
         }

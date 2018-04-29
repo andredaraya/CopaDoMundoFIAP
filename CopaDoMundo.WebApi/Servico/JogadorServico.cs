@@ -1,9 +1,6 @@
 ﻿using CopaDoMundo.Model;
 using CopaDoMundo.WebApi.Dados.Repositorio;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CopaDoMundo.WebApi.Servico
 {
@@ -15,7 +12,8 @@ namespace CopaDoMundo.WebApi.Servico
         {
             _repo = new JogadorRepositorio();
         }
-        public void CadastrarSelecao(Jogador model)
+
+        public void CadastrarJogador(Jogador model)
         {            
             _repo.CadastrarJogador(model);
         }
@@ -35,6 +33,11 @@ namespace CopaDoMundo.WebApi.Servico
         public IEnumerable<Jogador> RetornaTodosJogadores()
         {            
             return _repo.BuscarTodosOsJogadores();
+        }
+
+        public IEnumerable<Jogador> RetornarPorSelecao(int idSelecao)
+        {
+            return _repo.BuscarTodosOsJogadoresPorSelecao(idSelecao);
         }
 
         public Jogador RetornaJogadorPorId(int id)

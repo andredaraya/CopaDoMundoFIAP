@@ -34,23 +34,8 @@ namespace CopaDoMundo.Web.Servico.Servicos
 
         public async Task<Jogador> BuscarPorId(int id)
         {
-            var temp = new JogadorDTO()
-            {
-                ID = 1,
-                Nome = "Alejo",
-                Apelido = "Gornaldo",
-                Idade = 35,
-                Posicao = "Centro Avante", //descrição que virá do banco
-                Ativo = true,
-                CriadoEm = DateTime.Now,
-                Selecao = 1
-
-            };
-
-            return temp;
-
             return await this._options.BuscarPorId
-                                     .SetQueryParams(id)
+                                     .SetQueryParam("id", id)
                                      .WithHeader("Cache-Control", "no-cache")
                                      .GetJsonAsync<Jogador>();
         }
@@ -66,7 +51,7 @@ namespace CopaDoMundo.Web.Servico.Servicos
         {
 
             return await this._options.BuscarPorselecao
-                                     .SetQueryParams(selecaoId)
+                                     .SetQueryParam("selecaoId", selecaoId)
                                      .WithHeader("Cache-Control", "no-cache")
                                      .GetJsonAsync<IEnumerable<Jogador>>();
 

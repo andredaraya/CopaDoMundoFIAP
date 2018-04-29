@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CopaDoMundo.Model;
+﻿using CopaDoMundo.Model;
 using CopaDoMundo.WebApi.Servico;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace CopaDoMundo.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Jogador")]
     public class JogadorController : Controller
     {
         JogadorServico servico;
@@ -20,36 +17,48 @@ namespace CopaDoMundo.WebApi.Controllers
 
         // GET api/values
         [HttpGet]
+        [Route("buscarTodos")]
         public IEnumerable<Jogador> Get()
         {
             return servico.RetornaTodosJogadores();
         }
 
+        [HttpGet]
+        [Route("buscarPorSelecao")]
+        public IEnumerable<Jogador> BuscarPorSelecao([FromQuery] int idSelecao)
+        {
+            return servico.RetornarPorSelecao(idSelecao);
+        }
+
         // GET api/values/5
-        [HttpGet("{id}")]
-        public Jogador Get(int id)
+        [HttpGet]
+        [Route("buscarPorId")]
+        public Jogador Get([FromQuery] int id)
         {
             return servico.RetornaJogadorPorId(id);
         }
 
         // POST api/values
         [HttpPost]
+        [Route("adicionar")]
         public void Post([FromBody]Jogador value)
         {
-            servico.CadastrarSelecao(value);
+            servico.CadastrarJogador(value);
         }
 
         // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]Jogador value)
+        [HttpPost]
+        [Route("atualizar")]
+        public void Put([FromBody]Jogador value)
         {
-            value.ID = id;
+            //value.ID = id;
             servico.AtualizarJogador(value);
         }
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpPost]
+        [Route("remover")]
+        public void Delete([FromBody] int id)
         {
             servico.DeletarJogador(id);
         }
