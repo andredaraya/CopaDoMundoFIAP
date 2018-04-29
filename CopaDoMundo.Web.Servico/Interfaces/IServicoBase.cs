@@ -1,15 +1,17 @@
-﻿using CopaDoMundo.Web.Servico.DTO;
+﻿using CopaDoMundo.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CopaDoMundo.Web.Servico.Interfaces
 {
-    public interface IServicoBase<TEntidadeDTO> where TEntidadeDTO : EntidadeDTO
+
+    public interface IServicoBase<TEntidade> where TEntidade : EntidadeBase
+
     {
-        Task Add(TEntidadeDTO entity);
-        Task<TEntidadeDTO> BuscarPorId(int id);
-        Task<IEnumerable<TEntidadeDTO>> BuscarTodos();
-        Task Atualizar(TEntidadeDTO entidade);
+        Task Add(TEntidade entity);
+        Task<TEntidade> BuscarPorId(int id);
+        Task<IEnumerable<TEntidade>> BuscarTodos();
+        Task Atualizar(TEntidade entidade);
         Task Remover(int id);
     }
 }

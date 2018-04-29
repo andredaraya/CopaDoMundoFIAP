@@ -1,4 +1,4 @@
-﻿using CopaDoMundo.Web.Servico.DTO;
+﻿using CopaDoMundo.Model;
 using CopaDoMundo.Web.Servico.Interfaces;
 using CopaDoMundo.Web.Servico.Options;
 using Flurl;
@@ -18,21 +18,21 @@ namespace CopaDoMundo.Web.Servico.Servicos
             this._options = options;
         }
 
-        public async Task Add(JogadorDTO entidade)
+        public async Task Add(Jogador entidade)
         {
             await this._options.Adicionar
                                .WithHeader("Cache-Control", "no-cache")
                                .PostJsonAsync(entidade);
         }
 
-        public async Task Atualizar(JogadorDTO entidade)
+        public async Task Atualizar(Jogador entidade)
         {
             await this._options.Atualizar
                                .WithHeader("Cache-Control", "no-cache")
                                .PostJsonAsync(entidade);
         }
 
-        public async Task<JogadorDTO> BuscarPorId(int id)
+        public async Task<Jogador> BuscarPorId(int id)
         {
             var temp = new JogadorDTO()
             {
@@ -52,88 +52,33 @@ namespace CopaDoMundo.Web.Servico.Servicos
             return await this._options.BuscarPorId
                                      .SetQueryParams(id)
                                      .WithHeader("Cache-Control", "no-cache")
-                                     .GetJsonAsync<JogadorDTO>();
+                                     .GetJsonAsync<Jogador>();
         }
 
-        public async Task<IEnumerable<JogadorDTO>> BuscarTodosAtivos()
+        public async Task<IEnumerable<Jogador>> BuscarTodosAtivos()
         {
             return await this._options.BuscarTodosAtivo
                                      .WithHeader("Cache-Control", "no-cache")
-                                     .GetJsonAsync<IEnumerable<JogadorDTO>>();
+                                     .GetJsonAsync<IEnumerable<Jogador>>();
         }
 
-        public async Task<IEnumerable<JogadorDTO>> BuscarPorSelecao(int selecaoId)
+        public async Task<IEnumerable<Jogador>> BuscarPorSelecao(int selecaoId)
         {
-            List<JogadorDTO> listTemp = new List<JogadorDTO>();
-            listTemp.Add(new JogadorDTO()
-            {
-                ID = 1,
-                Nome = "Alejo",
-                Apelido = "Gornaldo",
-                Idade = 35,
-                Posicao = "Centro Avante", //descrição que virá do banco
-                Ativo = true,
-                CriadoEm = DateTime.Now,
-                Selecao = 1
 
-            });
+            return await this._options.BuscarPorselecao
+                                     .SetQueryParams(selecaoId)
+                                     .WithHeader("Cache-Control", "no-cache")
+                                     .GetJsonAsync<IEnumerable<Jogador>>();
 
-            listTemp.Add(new JogadorDTO()
-            {
-                ID = 2,
-                Nome = "Garrincha",
-                Apelido = "Torto",
-                Idade = 90,
-                Posicao = "Centro Avante", //descrição que virá do banco
-                Ativo = true,
-                CriadoEm = DateTime.Now,
-                Selecao = 1
-
-            });
-
-            return listTemp;
-
-            //Utilizar esse código para chamar a API
-            //return await this._options.BuscarPorselecao
-            //                         .SetQueryParams(selecaoId)
-            //                         .WithHeader("Cache-Control", "no-cache")
-            //                         .GetJsonAsync<IEnumerable<JogadorDTO>>();
         }
 
-        public async Task<IEnumerable<JogadorDTO>> BuscarTodos()
+        public async Task<IEnumerable<Jogador>> BuscarTodos()
         {
-            List<JogadorDTO> listTemp = new List<JogadorDTO>();
-            listTemp.Add(new JogadorDTO()
-            {
-                ID = 1,
-                Nome = "Alejo",
-                Apelido = "Gornaldo",
-                Idade = 35,
-                Posicao = "Centro Avante", //descrição que virá do banco
-                Ativo = true,
-                CriadoEm = DateTime.Now,
-                Selecao = 1
 
-            });
+            return await this._options.BuscarTodos
+                                     .WithHeader("Cache-Control", "no-cache")
+                                     .GetJsonAsync<IEnumerable<Jogador>>();
 
-            listTemp.Add(new JogadorDTO()
-            {
-                ID = 2,
-                Nome = "Garrincha",
-                Apelido = "Torto",
-                Idade = 90,
-                Posicao = "Centro Avante", //descrição que virá do banco
-                Ativo = true,
-                CriadoEm = DateTime.Now,
-                Selecao = 1
-
-            });
-
-            return listTemp;
-            //Utilizar esse código para chamar a API
-            //return await this._options.BuscarTodos
-            //                         .WithHeader("Cache-Control", "no-cache")
-            //                         .GetJsonAsync<IEnumerable<JogadorDTO>>();
         }
 
         public async Task Remover(int id)

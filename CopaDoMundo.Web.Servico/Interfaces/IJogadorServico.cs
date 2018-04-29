@@ -1,12 +1,13 @@
-﻿using CopaDoMundo.Web.Servico.DTO;
+﻿using CopaDoMundo.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CopaDoMundo.Web.Servico.Interfaces
 {
-    public interface IJogadorServico : IServicoBase<JogadorDTO>
+    public interface IJogadorServico : IServicoBase<Jogador>
     {
-        Task<IEnumerable<JogadorDTO>> BuscarTodosAtivos();
-        Task<IEnumerable<JogadorDTO>> BuscarPorSelecao(int selecaoId);
+        
+        Task<IEnumerable<Jogador>> BuscarTodosAtivos();
+        Task<IEnumerable<Jogador>> BuscarPorSelecao(int selecaoId);
     }
 }

@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace CopaDoMundo.Web.Servico.DTO
+namespace CopaDoMundo.Model
 {
-    public class JogadorDTO : EntidadeDTO
+    public class Jogador : EntidadeBase
     {
         public int ID { get; set; }
         public string Nome { get; set; }
         public string Apelido { get; set; }
         public int Idade { get; set; }
         public string Posicao { get; set; }
-        public int  Selecao { get; set; }
+        public int Selecao { get; set; }
     }
 }

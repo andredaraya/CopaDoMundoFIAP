@@ -1,4 +1,4 @@
-﻿using CopaDoMundo.Web.Servico.DTO;
+﻿using CopaDoMundo.Model;
 using CopaDoMundo.Web.Servico.Interfaces;
 using CopaDoMundo.Web.Servico.Options;
 using Flurl;
@@ -18,43 +18,33 @@ namespace CopaDoMundo.Web.Servico.Servicos
             this._options = options;
         }
 
-        public async Task Add(SelecaoDTO entidade)
+        public async Task Add(Selecao entidade)
         {
             await this._options.Adicionar
                                 .WithHeader("Cache-Control", "no-cache")
                                 .PostJsonAsync(entidade);
         }
 
-        public async Task Atualizar(SelecaoDTO entidade)
+        public async Task Atualizar(Selecao entidade)
         {
             await this._options.Atualizar
                                .WithHeader("Cache-Control", "no-cache")
                                .PostJsonAsync(entidade);
         }
 
-        public async Task<SelecaoDTO> BuscarPorId(int id)
+        public async Task<Selecao> BuscarPorId(int id)
         {
-            var temp = new SelecaoDTO()
-            {
-                ID = 1,
-                Ativo = true,
-                CriadoEm = DateTime.Now,
-                Nome = "Brasil",
-                QuantidadeTitulos = 5
-            };
-
-            return temp;
-
+     
             return await this._options.BuscarPorId
                                       .SetQueryParams(id)
                                       .WithHeader("Cache-Control", "no-cache")
-                                      .GetJsonAsync<SelecaoDTO>();
+                                      .GetJsonAsync<Selecao>();
         }
 
-        public async Task<IEnumerable<SelecaoDTO>> BuscarTodos()
+        public async Task<IEnumerable<Selecao>> BuscarTodos()
         {
-            List<SelecaoDTO> listTEmp = new List<SelecaoDTO>();
-            listTEmp.Add(new SelecaoDTO()
+            List<Selecao> listTEmp = new List<Selecao>();
+            listTEmp.Add(new Selecao()
             {
                 ID = 1,
                 Ativo = true,
@@ -63,7 +53,7 @@ namespace CopaDoMundo.Web.Servico.Servicos
                 QuantidadeTitulos = 5
             });
 
-            listTEmp.Add(new SelecaoDTO()
+            listTEmp.Add(new Selecao()
             {
                 ID = 2,
                 Ativo = true,
@@ -76,13 +66,13 @@ namespace CopaDoMundo.Web.Servico.Servicos
 
             return await this._options.BuscarTodos
                                      .WithHeader("Cache-Control", "no-cache")
-                                     .GetJsonAsync<IEnumerable<SelecaoDTO>>();
+                                     .GetJsonAsync<IEnumerable<Selecao>>();
         }
 
-        public async Task<IEnumerable<SelecaoDTO>> BuscarTodosAtivos()
+        public async Task<IEnumerable<Selecao>> BuscarTodosAtivos()
         {
-            List<SelecaoDTO> listTEmp = new List<SelecaoDTO>();
-            listTEmp.Add(new SelecaoDTO()
+            List<Selecao> listTEmp = new List<Selecao>();
+            listTEmp.Add(new Selecao()
             {
                 ID = 1,
                 Ativo = true,
@@ -95,7 +85,7 @@ namespace CopaDoMundo.Web.Servico.Servicos
 
             return await this._options.BuscarTodosAtivo
                                      .WithHeader("Cache-Control", "no-cache")
-                                     .GetJsonAsync<IEnumerable<SelecaoDTO>>();
+                                     .GetJsonAsync<IEnumerable<Selecao>>();
         }
 
         public async Task Remover(int id)
