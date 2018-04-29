@@ -32,7 +32,7 @@ namespace CopaDoMundo.Web.Controllers
             return base.Criar(entidade);
         }
 
-        public IActionResult Index(int id)
+        public override IActionResult Editar(int id)
         {
             var jogador = _jogadorServico.BuscarPorId(id).Result;
             var jogadorMapeado = Mapper.Map<JogadorViewModel>(jogador);

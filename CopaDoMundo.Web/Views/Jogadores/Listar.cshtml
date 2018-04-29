@@ -1,0 +1,57 @@
+﻿@using CopaDoMundo.Web.Extensoes
+@model List<JogadorViewModel>
+
+@{
+    var temJogador = Model != null && Model.Any();
+
+    ViewData["Title"] = "Jogadores";
+}
+<link href="~/css/index.css" rel="stylesheet" />
+<h2>Lista de Jogadores</h2>
+<hr />
+
+@if (ViewBag.Error != null && ViewBag.Error)
+{
+    <div class="alert alert-danger alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Erro!</strong> Deu ruim!
+    </div>
+}
+<a class="btn btn-primary" href="~/Jogadores/Criar">ADICIONAR &raquo;</a>
+<br />
+@if (temJogador)
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Apelido</th>
+                <th>Idade</th>
+                <th>Selecao</th>
+                <th>Posicao</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Apelido</td>
+                <td>@item.Idade</td>
+                <td>@item.Selecao</td>
+                <td>@item.Posicao.ToDescriptionString()</td>
+
+                <td>
+                    <a style="padding-right: 5px" class="btn btn-primary" href="~/Jogadores/Editar/@item.ID">EDITAR &raquo;</a>
+                    <a class="btn btn-primary" href="~/Jogadores/Deletar/@item.ID">REMOVER &raquo;</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="row">
+
+    </div>
+}

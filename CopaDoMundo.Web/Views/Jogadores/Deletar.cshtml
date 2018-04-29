@@ -1,0 +1,42 @@
+﻿@using CopaDoMundo.Web.Extensoes
+@model CopaDoMundo.Web.ViewModels.JogadorViewModel
+
+@{
+    ViewData["Title"] = "Deletar";
+}
+<link href="~/css/index.css" rel="stylesheet" />
+<h3>Certeza que vai fazer isso?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Apelido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apelido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Posicao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Posicao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selecao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selecao)
+        </dd>
+    </dl>
+
+    <form asp-action="Deletar">
+        <input type="submit" value="Remover" class="btn btn-default" /> |
+        <a asp-action="Listar">Voltar</a>
+    </form>
+</div>

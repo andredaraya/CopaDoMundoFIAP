@@ -18,7 +18,7 @@ namespace CopaDoMundo.Web.Controllers
             _jogadorServico = jogadorServico;
         }
 
-        public IActionResult Index(int id)
+        public override IActionResult Editar(int id)
         {
             var selecao = _servico.BuscarPorId(id).Result;
             var selecaoMapeada = Mapper.Map<SelecaoViewModel>(selecao);
@@ -27,7 +27,7 @@ namespace CopaDoMundo.Web.Controllers
             var jogadoresMapeados = Mapper.Map<List<JogadorViewModel>>(jogadores);
             selecaoMapeada.Jogadores = jogadoresMapeados;
 
-            return View("Editar",selecaoMapeada);
+            return View(selecaoMapeada);
         }
     }
 }

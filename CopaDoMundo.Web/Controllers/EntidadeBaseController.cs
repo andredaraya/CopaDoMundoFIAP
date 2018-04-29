@@ -56,7 +56,7 @@ namespace CopaDoMundo.Web.Controllers
         }
 
         // GET: entity/Edit/5
-        public IActionResult Editar(int id)
+        public virtual IActionResult Editar(int id)
         {
             var entidade = _servico.BuscarPorId(id).Result;
             var entidadeMapeada = Mapper.Map<TEntidadeViewModel>(entidade);
